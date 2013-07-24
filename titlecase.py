@@ -89,11 +89,10 @@ class TitleCase(object):
 	"""
     
 	def __init__(self):
-		print "Initializing TitleCase Jinja2 Filter"
+		print "Initializing TitleCase Jinja2 Filter by J.R. Arseneau (http://theinterstitial.net)"
 
 	def __call__(self, text):
 		text = content_to_titlecase(text)
-		print text
 		return text
 
 
