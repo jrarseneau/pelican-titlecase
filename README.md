@@ -1,7 +1,8 @@
 # TitleCase Plugin for Pelican
 
-Pelican blogging framework port of Stuart Colville's titlecase (based on original 
-titlecase.pl by John Gruber of www.daringfireball.net)
+Implemention of [Python titlecase](https://pypi.org/project/titlecase/) for the [Pelican](https://getpelican.com) static blogging system. 
+
+Titlecase.pl was originally created by [John Gruber from Daring Fireball](https://daringfireball.net/)
 
 ## What it does
 
@@ -17,16 +18,19 @@ An example (an article title)
 
 	Apple Profit Falls 22% but Beats Gloomy Expectations
 
+
 ## Installation
 
 1. Clone this repository into where you normally keep your pelican plugins
-2. Tell Pelican to use the plugin by modifying your ``pelicanconf.py`` file, and modify
-(or add) the ``PLUGINS`` setting:
+2. Install the required pip module (titlecase): `pip install -r requirements.txt`
+3. Modify your `pelicanconf.py` file, and update the `PLUGINS` setting to include `pelican-titlecase`:
 
-	``PLUGINS = ["pelican-titlecase"]``
+	`PLUGINS = ["pelican-titlecase"]`
 
 ## Usage
 
 Anywhere in your theme's templates, invoke the filter as follows:
 
-	{{ article.title | titlecase }} # This will titlecase all your article titles
+	`{{ article.title | titlecase }}` 
+
+This will titlecase all your article titles
